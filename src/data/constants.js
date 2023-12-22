@@ -5,11 +5,11 @@ export const Bio = {
     "Much like Spidey swings through the city, I constantly seek fresh opportunities and self-improvement, embodying a sense of purpose and a dedication to personal growth akin to Peter Parker's commitment to protecting the city as Spider-Man.",
   github: "https://github.com/VineethChivukula",
   resume:
-    "https://drive.google.com/file/d/1mIKFm9quRmVV9oj6LSwxl82uOILlxwck/view?usp=sharing",
+    "https://drive.google.com/file/d/1Aeb8yz_lJXgMJYRrEp4q01tiawZRoiFp/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/VineethChivukula/",
   twitter: "https://twitter.com/6nnyverse",
-  insta: "https://www.instagram.com/6nnyverse/",
-  youtube: "https://www.youtube.com/@6nnyverse361",
+  insta: "https://www.instagram.com/6nny.xsd/",
+  youtube: "https://www.youtube.com/channel/UCP45O051m-oOWefiq3rI7YA",
 };
 
 export const skills = [
@@ -188,6 +188,18 @@ export const education = [
 ];
 
 export const projects = [
+  {
+    id: 1,
+    title: "Netflix Clone",
+    date: "Dec 2023",
+    description:
+      "Created a website resembling Netflix using React, SCSS, and the themoviedb API and deployed it using Firebase.",
+    image: "https://i.ibb.co/QQXWzq5/Screenshot-2023-12-22-152733.jpg",
+    tags: ["ReactJS", "SCSS", "Firebase", "API"],
+    category: "web app",
+    github: "https://github.com/VineethChivukula/netflixclone/",
+    webpage: "http://vineethchivukula.github.io/netflixclone/",
+  },
   {
     id: 0,
     title: "Identification Of Salt-affected Soils",
