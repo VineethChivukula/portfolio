@@ -60,7 +60,7 @@ const Header = () => {
           whileTap={{ scale: 0.9 }}
         >
           <motion.a
-            href="/portfolio/"
+            href="/portfolio"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >
