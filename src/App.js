@@ -83,7 +83,7 @@ const App = () => {
     <Scrollbar>
       <div className="font-poppins">
         <Preloader onComplete={() => setIsPreloaderComplete(true)} />
-        <ScrollProgressBar />
+        <ScrollProgressBar isOpen={isPreloaderComplete} />
         <WigglyCursor />
         <Header />
         <Hero />
