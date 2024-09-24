@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+/* 
+  Custom scrollbar styling for WebKit browsers
+  ::-webkit-scrollbar - Defines the width of the scrollbar
+  ::-webkit-scrollbar-track - Styles the track (background) of the scrollbar
+  ::-webkit-scrollbar-thumb - Styles the draggable part of the scrollbar (thumb)
+  - background-color: Sets the color of the scrollbar thumb
+  - border-radius: Rounds the corners of the scrollbar thumb
+  - border: Adds a border around the scrollbar thumb
+
+  Universal scrollbar styling for Firefox
+  * - Applies to all elements
+  - scrollbar-width: Sets the width of the scrollbar
+  - scrollbar-color: Sets the color of the scrollbar thumb and track
+
+  Text selection styling
+  ::selection - Styles the background and text color of selected text
+  - color: Sets the text color of the selected text
+  - background: Sets the background color of the selected text
+
+  Anchor tag styling
+  a - Styles the color of anchor tags (links)
+  - color: Sets the text color of links
+*/
+
+::-webkit-scrollbar {
+  width: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+::-webkit-scrollbar-thumb {
+  background-color: purple;
+  border-radius: 10px;
+  border: 5px solid #f1f1f1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+* {
+  scrollbar-width: thick;
+  scrollbar-color: #601c84 #f1f1f1;
 }
 
-.App-link {
-  color: #61dafb;
+::selection {
+  color: #601c84;
+  background: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+  color: #601c84;
 }

@@ -1,0 +1,32 @@
+/* Custom styles for the scroll progress bar */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px; /* Keep the thickness suitable for visibility */
+  background: linear-gradient(
+    90deg,
+    #8e44ad 0%,
+    #2ecc71 100%
+  ); /* Purplish-green gradient */
+  border-radius: 0 3px 3px 0; /* Remove the radius on the left side to avoid blur at the start */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Reduced shadow to minimize blur effect */
+  transform-origin: 0%;
+  z-index: 1000; /* Keep it above all other elements */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .progress-bar {
+    height: 4px; /* Reduce thickness for smaller screens */
+    border-radius: 0 2px 2px 0; /* Adjust border radius for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .progress-bar {
+    height: 3px; /* Further reduce thickness for very small screens */
+    border-radius: 0 1px 1px 0; /* Adjust border radius for very small screens */
+  }
+}

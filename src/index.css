@@ -1,13 +1,16 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/* Import Tailwind's base styles */
+@tailwind base;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Import Tailwind's component styles */
+@tailwind components;
+
+/* Import Tailwind's utility styles */
+@tailwind utilities;
+
+/* Define a custom font-face for Poppins */
+@font-face {
+  font-family: "Poppins"; /* Name of the font */
+  src: url("./assets/fonts/Poppins.ttf") format("truetype"); /* Path to the font file and its format */
+  font-weight: 400; /* Normal font weight */
+  font-style: normal; /* Normal font style */
 }

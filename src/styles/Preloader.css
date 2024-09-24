@@ -1,0 +1,49 @@
+/* Preloader container styles */
+.preloader {
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background: #4b0082; /* Indigo background color */
+  position: fixed; /* Fixed position to cover the entire viewport */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  color: #fff; /* White text color */
+  z-index: 9999; /* High z-index to ensure it is on top */
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Column direction for flex items */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  opacity: 0; /* Initially hidden */
+  overflow: hidden; /* Hide overflow content */
+}
+
+/* Loader bar container styles */
+.loader {
+  display: flex; /* Flexbox layout */
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  height: 8px; /* Fixed height */
+  overflow: hidden; /* Hide overflow content */
+  width: 300px; /* Fixed width */
+  margin-top: 20px; /* Space above the loader */
+}
+
+/* Loader bar styles */
+.loader-1 {
+  position: relative; /* Relative positioning */
+  background: #ffffff; /* White background */
+  width: 0; /* Initial width of 0 */
+  height: 100%; /* Full height of the parent */
+}
+
+/* Preloader logo container styles */
+.preloader-logo-container {
+  display: flex; /* Flexbox layout */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+}
+
+/* Preloader logo styles */
+.preloader-logo {
+  width: 120px; /* Fixed width */
+  height: auto; /* Maintain aspect ratio */
+  opacity: 0; /* Initially hidden */
+}

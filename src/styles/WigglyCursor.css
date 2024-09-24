@@ -1,0 +1,27 @@
+/* Container div that covers the entire viewport */
+.container-div {
+  position: fixed; /* Fixes the position relative to the viewport */
+  top: 0; /* Aligns to the top of the viewport */
+  left: 0; /* Aligns to the left of the viewport */
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  pointer-events: none; /* Makes the container non-interactive */
+  overflow: hidden; /* Hides overflow content */
+  z-index: 9999; /* Ensures it is on top of other elements */
+}
+
+/* Jelly blob element that will follow the cursor */
+.jelly-blob {
+  position: absolute; /* Positioned relative to the nearest positioned ancestor */
+  top: 0; /* Initial top position */
+  left: 0; /* Initial left position */
+  width: 100px; /* Width of the blob */
+  height: 100px; /* Height of the blob */
+  border-radius: 50%; /* Makes the blob circular */
+  border: 2px solid white; /* White border around the blob */
+  background-color: transparent; /* Transparent background */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Adds a glowing effect */
+  pointer-events: none; /* Makes the blob non-interactive */
+  transform: translate(-50%, -50%); /* Centers the blob */
+  will-change: transform; /* Optimizes performance for transform changes */
+}
