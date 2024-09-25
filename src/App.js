@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Element } from "react-scroll";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -12,7 +13,6 @@ import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import WigglyCursor from "./components/WigglyCursor";
-import { Scrollbar } from "smooth-scrollbar-react";
 import ScrollProgressBar from "./components/ScrollProgressBar";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -22,23 +22,16 @@ import Preloader from "./components/Preloader";
 gsap.registerPlugin(ScrollTrigger);
 
 /**
- * App component that manages the preloader state and prevents scrolling until the preloader is complete.
+ * App component that serves as the main entry point for the portfolio application.
+ *
+ * This component manages the preloader state and prevents scrolling until the preloader is complete.
+ * It renders various sections of the portfolio, each wrapped in an `Element` for scroll targeting.
  *
  * @component
  * @example
  * return (
  *   <App />
  * )
- *
- * @returns {JSX.Element} The rendered App component.
- *
- * @description
- * The App component initializes with a preloader and prevents user scrolling until the preloader is complete.
- * It uses the `useState` hook to manage the preloader state and the `useEffect` hook to add and remove event listeners
- * for preventing scroll events. Once the preloader is complete, the scroll prevention is removed.
- *
- * @function
- * @name App
  */
 const App = () => {
   const [isPreloaderComplete, setIsPreloaderComplete] = useState(false);
@@ -61,25 +54,63 @@ const App = () => {
   }, [isPreloaderComplete]);
 
   return (
-    <Scrollbar>
-      <div className="font-poppins">
-        <Preloader onComplete={() => setIsPreloaderComplete(true)} />
-        <ScrollProgressBar isOpen={isPreloaderComplete} />
-        <WigglyCursor />
-        <Header />
+    <div className="font-poppins">
+      <Preloader onComplete={() => setIsPreloaderComplete(true)} />
+      <ScrollProgressBar isOpen={isPreloaderComplete} />
+      <WigglyCursor />
+      <Header />
+      <Element name="hero">
+        {" "}
+        {/* Marks the scroll target for Hero section */}
         <Hero />
+      </Element>
+      <Element name="about">
+        {" "}
+        {/* Marks the scroll target for About section */}
         <About />
+      </Element>
+      <Element name="skills">
+        {" "}
+        {/* Marks the scroll target for Skills section */}
         <Skills />
+      </Element>
+      <Element name="projects">
+        {" "}
+        {/* Marks the scroll target for Projects section */}
         <Projects />
+      </Element>
+      <Element name="publications">
+        {" "}
+        {/* Marks the scroll target for Publications section */}
         <Publications />
+      </Element>
+      <Element name="certifications">
+        {" "}
+        {/* Marks the scroll target for Certifications section */}
         <Certifications />
+      </Element>
+      <Element name="awards">
+        {" "}
+        {/* Marks the scroll target for Awards section */}
         <Awards />
+      </Element>
+      <Element name="experience">
+        {" "}
+        {/* Marks the scroll target for Experience section */}
         <Experience />
+      </Element>
+      <Element name="testimonials">
+        {" "}
+        {/* Marks the scroll target for Testimonials section */}
         <Testimonials />
+      </Element>
+      <Element name="contact">
+        {" "}
+        {/* Marks the scroll target for Contact section */}
         <Contact />
-        <Footer />
-      </div>
-    </Scrollbar>
+      </Element>
+      <Footer />
+    </div>
   );
 };
 
