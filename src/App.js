@@ -22,61 +22,42 @@ import Preloader from "./components/Preloader";
 gsap.registerPlugin(ScrollTrigger);
 
 /**
- * App component that serves as the main entry point for the portfolio application.
+ * App component that manages the preloader state and prevents scrolling until the preloader is complete.
  *
  * @component
- *
  * @example
  * return (
  *   <App />
  * )
  *
- * @returns {JSX.Element} The rendered component.
+ * @returns {JSX.Element} The rendered App component.
  *
  * @description
- * The App component manages the state of the preloader and prevents scrolling while the preloader is active.
- * It uses the `useEffect` hook to add and remove event listeners for preventing scroll events.
- * Once the preloader is complete, the scroll prevention is removed.
+ * The App component initializes with a preloader and prevents user scrolling until the preloader is complete.
+ * It uses the `useState` hook to manage the preloader state and the `useEffect` hook to add and remove event listeners
+ * for preventing scroll events. Once the preloader is complete, the scroll prevention is removed.
  *
- * @returns {JSX.Element} The main application component wrapped in a custom Scrollbar.
- *
- * @property {boolean} isPreloaderComplete - State to track if the preloader has completed.
- * @property {function} setIsPreloaderComplete - Function to update the state of the preloader.
- *
- * @function preventScroll - Event handler to prevent default scroll behavior.
- *
- * @listens wheel - Adds an event listener to prevent wheel scroll.
- * @listens touchmove - Adds an event listener to prevent touch scroll.
- *
- * @component Preloader - Displays a preloader animation and triggers `onComplete` callback when done.
- * @component ScrollProgressBar - Displays a progress bar indicating scroll position.
- * @component WigglyCursor - Adds a custom cursor effect.
- * @component Header - Displays the header section of the portfolio.
- * @component Hero - Displays the hero section.
- * @component About - Displays the about section.
- * @component Skills - Displays the skills section.
- * @component Projects - Displays the projects section.
- * @component Publications - Displays the publications section.
- * @component Certifications - Displays the certifications section.
- * @component Awards - Displays the awards section.
- * @component Experience - Displays the experience section.
- * @component Testimonials - Displays the testimonials section.
- * @component Contact - Displays the contact section.
- * @component Footer - Displays the footer section.
+ * @function
+ * @name App
  */
 const App = () => {
   const [isPreloaderComplete, setIsPreloaderComplete] = useState(false);
 
   useEffect(() => {
+    const preventScroll = (e) => e.preventDefault();
+
     if (!isPreloaderComplete) {
-      const preventScroll = (e) => e.preventDefault();
       document.addEventListener("wheel", preventScroll, { passive: false });
       document.addEventListener("touchmove", preventScroll, { passive: false });
-      return () => {
-        document.removeEventListener("wheel", preventScroll);
-        document.removeEventListener("touchmove", preventScroll);
-      };
+    } else {
+      document.removeEventListener("wheel", preventScroll);
+      document.removeEventListener("touchmove", preventScroll);
     }
+
+    return () => {
+      document.removeEventListener("wheel", preventScroll);
+      document.removeEventListener("touchmove", preventScroll);
+    };
   }, [isPreloaderComplete]);
 
   return (
