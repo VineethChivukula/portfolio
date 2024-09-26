@@ -2,34 +2,41 @@ import { motion, useCycle } from "framer-motion";
 import PropTypes from "prop-types";
 import vLogo from "../assets/vlogo.png";
 import { Link } from "react-scroll";
+import { useEffect, useRef } from "react";
 
 /**
  * Header component that includes a logo, desktop navigation, and a mobile navigation menu.
  *
  * @component
+ * @returns {JSX.Element} The rendered Header component.
+ *
  * @example
  * return (
  *   <Header />
  * )
  *
- * @returns {JSX.Element} The rendered header component.
- *
  * @description
- * The Header component includes:
- * - A logo that is draggable and has hover and tap animations.
- * - A desktop navigation menu with links to various sections of the portfolio.
- * - A hamburger menu icon for mobile view that toggles the mobile navigation menu.
- * - A mobile navigation menu that slides in and out with animation.
+ * The Header component uses the `useCycle` hook to toggle the state of the sidebar (open/closed).
+ * It also uses `useRef` to reference the sidebar element and `useEffect` to handle clicks outside the sidebar.
  *
- * @requires useCycle from 'framer-motion'
- * @requires motion from 'framer-motion'
- * @requires Link from 'react-scroll'
- * @requires MenuToggle from './MenuToggle'
- * @requires Navigation from './Navigation'
- * @requires vLogo from '../assets/vLogo.png'
+ * The component includes:
+ * - A logo with animation effects.
+ * - Desktop navigation links with drag and hover effects.
+ * - A hamburger menu icon for mobile view.
+ * - A mobile navigation menu that slides in and out.
+ *
+ * @dependencies
+ * - `useCycle` from `framer-motion`
+ * - `useRef` and `useEffect` from `react`
+ * - `motion` from `framer-motion`
+ * - `Link` from `react-scroll`
+ *
+ * @props None
  */
 const Header = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
+  const sidebarRef = useRef(null);
+
   const sidebarVariants = {
     open: {
       x: 0,
@@ -46,6 +53,24 @@ const Header = () => {
       },
     },
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        toggleOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen, toggleOpen]);
 
   return (
     <header className="bg-purple-950 text-white py-4 shadow-lg fixed w-full z-20">
@@ -122,6 +147,7 @@ const Header = () => {
 
       {/* Mobile Navigation Menu */}
       <motion.nav
+        ref={sidebarRef}
         initial={false}
         animate={isOpen ? "open" : "closed"}
         variants={sidebarVariants}
