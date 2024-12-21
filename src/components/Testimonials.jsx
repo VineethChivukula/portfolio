@@ -18,7 +18,7 @@ const testimonials = [
   {
     name: "Upendra Gulipilli",
     image:
-      "https://media.licdn.com/dms/image/v2/D4D03AQHuT1lkUGxdfQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1711382061153?e=1732752000&v=beta&t=0XD4HkoD3BamhWG1ZY9XHjweGMqej9_DNF0oZ3gTCXc",
+      "https://media.licdn.com/dms/image/v2/D4D03AQHuT1lkUGxdfQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1711382061153?e=1740009600&v=beta&t=KzgyKrs_FCnMDoUvbTzmhptqCz6slfrEJfigQQcFJQk",
     role: "Co-Founder & CTO at Frontlines EduTech",
     review:
       "Vineeth's exceptional expertise in Python and Flask, combined with his proactive approach, clean code, and invaluable problem-solving skills, made him an outstanding tech intern, and I highly recommend him for any tech or development role.",
@@ -26,7 +26,7 @@ const testimonials = [
   {
     name: "Yogitha Akkineni",
     image:
-      "https://media.licdn.com/dms/image/v2/D5603AQGvSjTp-Qvs2A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712172721322?e=1732752000&v=beta&t=pbDl2G2gvW35n9PFOgZKC8GdrW35BTR7xR2LRzQ-WdQ",
+      "https://media.licdn.com/dms/image/v2/D5603AQGvSjTp-Qvs2A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712172721322?e=1740009600&v=beta&t=mkBdFxAfrOmK7GDJLSziG10kULDuy3THY2JLGWndwTs",
     role: "Associate Consultant at Microsoft",
     review:
       "Vineeth excels in full-stack development, specializing in Node.js, microservices, and diverse frameworks, delivering efficient, scalable solutions.",
@@ -34,7 +34,7 @@ const testimonials = [
   {
     name: "Avvaru Hari Sai Babu",
     image:
-      "https://media.licdn.com/dms/image/v2/D5603AQFXn0MU_WiboQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1692003058131?e=1732752000&v=beta&t=Diup0bQQD1Tg_rred9CzYtKzItiqlbnP2D7EZEIGT_s",
+      "https://media.licdn.com/dms/image/v2/D5603AQFXn0MU_WiboQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1692003058131?e=1740009600&v=beta&t=-ZwkN34wHmHHXB7A5lRxEHG3x0_zzPCH4Xstj7TsI6M",
     role: "Business Technology Analyst at Deloitte Tax",
     review:
       "A dedicated, passionate coder with consistent growth in web development and cybersecurity.",
@@ -42,7 +42,7 @@ const testimonials = [
   {
     name: "Sai Yarlagadda",
     image:
-      "https://media.licdn.com/dms/image/v2/C4E03AQGM5TrPLdoB4Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1657726690893?e=1732752000&v=beta&t=J-bnczZdmdL2Nfy3oWHuV6Bkc_F1vsjTTWAiIVGwGo8",
+      "https://media.licdn.com/dms/image/v2/C4E03AQGM5TrPLdoB4Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1657726690893?e=1740009600&v=beta&t=3d8BlDfY_zBomjJFO2CrlOYWqW_QnhKroWtOMPzpLWY",
     role: "Sr Associate Software Engineer at AT&T",
     review:
       "A passionate coder with a strong drive for quality, problem-solving, and innovation, making him a valuable team asset.",

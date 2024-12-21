@@ -5,6 +5,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const awards = [
   {
+    title: "Top performer of D2L Knowledge Checks",
+    description:
+      "Achieved the highest performance in the cohort during the JAVA ASE Techgenics training at Accenture.",
+    date: "Dec 2024",
+  },
+  {
     title: "LeetCode Bug Fix",
     description:
       "Reported a wrong solution in LeetCode’s Merge-Intervals problem; awarded 100 LeetCoins.",
