@@ -16,6 +16,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
  */
 const testimonials = [
   {
+    name: "Sujina Pradeep",
+    image:
+      "https://media.licdn.com/dms/image/v2/D4D03AQFTPSsyOo7_7Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712666251263?e=1740614400&v=beta&t=9PLbtHat1yWeAhseAi4V3GDjkEqcmWljOAZC9USta7s",
+    role: "Technology Education Senior Analyst at Accenture",
+    review:
+      "Vineeth is a very enthusiastic learner. He has a very clear vision as to what he  wants to achieve in life. He always strives for the best and puts in a lot of hard work to get there. The best quality in him is his willingness to accept a challenge. I have seen him experimenting with his codes so that it gives better results. He is a determined young leader and I see a very bright future ahead of him.",
+  },
+  {
     name: "Upendra Gulipilli",
     image:
       "https://media.licdn.com/dms/image/v2/D4D03AQHuT1lkUGxdfQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1711382061153?e=1740009600&v=beta&t=KzgyKrs_FCnMDoUvbTzmhptqCz6slfrEJfigQQcFJQk",
@@ -43,7 +51,7 @@ const testimonials = [
     name: "Sai Yarlagadda",
     image:
       "https://media.licdn.com/dms/image/v2/C4E03AQGM5TrPLdoB4Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1657726690893?e=1740009600&v=beta&t=3d8BlDfY_zBomjJFO2CrlOYWqW_QnhKroWtOMPzpLWY",
-    role: "Sr Associate Software Engineer at AT&T",
+    role: "Senior Associate Software Engineer at AT&T",
     review:
       "A passionate coder with a strong drive for quality, problem-solving, and innovation, making him a valuable team asset.",
   },

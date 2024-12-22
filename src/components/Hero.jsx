@@ -33,7 +33,7 @@ const Hero = () => {
           Vineeth Chivukula
         </h2>
         <p className="text-lg sm:text-xl md:text-2xl text-purple-300 mb-4">
-          Software Engineer | Python & React Enthusiast
+          Associate Software Engineer @Accenture
         </p>
         <p className="text-base sm:text-lg md:text-xl text-purple-400">
           Building scalable applications and solving problems through code.
