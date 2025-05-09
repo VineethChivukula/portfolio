@@ -1,6 +1,11 @@
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import sujinaAvatar from "../assets/sujina.jpg";
+import upendraAvatar from "../assets/upendra.jpg";
+import yogithaAvatar from "../assets/yogitha.jpg";
+import hariAvatar from "../assets/hari.jpg";
+import saiAvatar from "../assets/sai.jpg";
 
 /**
  * An array of testimonial objects.
@@ -8,7 +13,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
  *
  * @typedef {Object} Testimonial
  * @property {string} name - The name of the person giving the testimonial.
- * @property {string} image - The URL to the image of the person.
+ * @property {string} image - The URL of the person's image.
  * @property {string} role - The role or job title of the person.
  * @property {string} review - The testimonial or review provided by the person.
  *
@@ -17,40 +22,35 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const testimonials = [
   {
     name: "Sujina Pradeep",
-    image:
-      "https://media.licdn.com/dms/image/v2/D4D03AQFTPSsyOo7_7Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712666251263?e=1740614400&v=beta&t=9PLbtHat1yWeAhseAi4V3GDjkEqcmWljOAZC9USta7s",
+    image: sujinaAvatar,
     role: "Technology Education Senior Analyst at Accenture",
     review:
       "Vineeth is a very enthusiastic learner. He has a very clear vision as to what he  wants to achieve in life. He always strives for the best and puts in a lot of hard work to get there. The best quality in him is his willingness to accept a challenge. I have seen him experimenting with his codes so that it gives better results. He is a determined young leader and I see a very bright future ahead of him.",
   },
   {
     name: "Upendra Gulipilli",
-    image:
-      "https://media.licdn.com/dms/image/v2/D4D03AQHuT1lkUGxdfQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1711382061153?e=1740009600&v=beta&t=KzgyKrs_FCnMDoUvbTzmhptqCz6slfrEJfigQQcFJQk",
+    image: upendraAvatar,
     role: "Co-Founder & CTO at Frontlines EduTech",
     review:
       "Vineeth's exceptional expertise in Python and Flask, combined with his proactive approach, clean code, and invaluable problem-solving skills, made him an outstanding tech intern, and I highly recommend him for any tech or development role.",
   },
   {
     name: "Yogitha Akkineni",
-    image:
-      "https://media.licdn.com/dms/image/v2/D5603AQGvSjTp-Qvs2A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712172721322?e=1740009600&v=beta&t=mkBdFxAfrOmK7GDJLSziG10kULDuy3THY2JLGWndwTs",
+    image: yogithaAvatar,
     role: "Associate Consultant at Microsoft",
     review:
       "Vineeth excels in full-stack development, specializing in Node.js, microservices, and diverse frameworks, delivering efficient, scalable solutions.",
   },
   {
     name: "Avvaru Hari Sai Babu",
-    image:
-      "https://media.licdn.com/dms/image/v2/D5603AQFXn0MU_WiboQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1692003058131?e=1740009600&v=beta&t=-ZwkN34wHmHHXB7A5lRxEHG3x0_zzPCH4Xstj7TsI6M",
+    image: hariAvatar,
     role: "Business Technology Analyst at Deloitte Tax",
     review:
       "A dedicated, passionate coder with consistent growth in web development and cybersecurity.",
   },
   {
     name: "Sai Yarlagadda",
-    image:
-      "https://media.licdn.com/dms/image/v2/C4E03AQGM5TrPLdoB4Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1657726690893?e=1740009600&v=beta&t=3d8BlDfY_zBomjJFO2CrlOYWqW_QnhKroWtOMPzpLWY",
+    image: saiAvatar,
     role: "Senior Associate Software Engineer at AT&T",
     review:
       "A passionate coder with a strong drive for quality, problem-solving, and innovation, making him a valuable team asset.",

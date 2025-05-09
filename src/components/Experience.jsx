@@ -5,6 +5,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const experience = [
   {
+    title: "Associate Software Engineer",
+    organization: "Accenture",
+    location: "Mumbai, Maharashtra",
+    date: "Sep 2024 – Present",
+    // description:
+    //   "Mentored 10+ at-risk youth by implementing customized learning plans in mathematics, significantly improving their academic performance.",
+  },
+  {
     title: "Academic Support Volunteer",
     organization: "Make A Difference Organization",
     location: "Vijayawada, Andhra Pradesh",

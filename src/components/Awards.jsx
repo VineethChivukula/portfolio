@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const awards = [
   {
-    title: "Top performer of D2L Knowledge Checks",
+    title: "Tech Expressway Merit Holder Award",
     description:
       "Achieved the highest performance in the cohort during the JAVA ASE Techgenics training at Accenture.",
     date: "Dec 2024",
@@ -39,7 +39,7 @@ const awards = [
   },
   {
     title: "AP EAMCET 2020",
-    description: "Ranked 267 in AP EAMCET 2020.",
+    description: "Ranked 267 in AP EAMCET 2020 with a score of 136.",
     date: "Oct 2020",
   },
 ];

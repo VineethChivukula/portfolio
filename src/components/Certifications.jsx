@@ -5,9 +5,16 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const certifications = [
   {
+    title: "Microsoft Certified: Azure Fundamentals",
+    date: "Apr 2025",
+    link: "https://learn.microsoft.com/en-us/users/vineethchivukula/credentials/df403a349a495872",
+    description:
+      "Earned certification demonstrating foundational knowledge of cloud services and how those services are provided with Microsoft Azure.",
+  },
+  {
     title: "Microsoft Certified: Azure AI Fundamentals",
     date: "May 2024",
-    link: "https://learn.microsoft.com/api/credentials/share/en-us/vineethchivukula/E5D8D79E95FF06C4?sharingId",
+    link: "https://learn.microsoft.com/en-us/users/vineethchivukula/credentials/e5d8d79e95ff06c4",
     description:
       "Earned certification demonstrating foundational knowledge of AI and machine learning on Microsoft Azure.",
   },
