@@ -14,3 +14,9 @@
   font-weight: 400; /* Normal font weight */
   font-style: normal; /* Normal font style */
 }
+
+/* Remove horizontal overflow */
+html,
+body {
+  overflow-x: hidden;
+}
