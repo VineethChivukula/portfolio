@@ -85,9 +85,7 @@ const Header = () => {
           whileTap={{ scale: 0.9 }}
         >
           <motion.a
-            href="/portfolio"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             <motion.div
               drag
@@ -111,6 +109,7 @@ const Header = () => {
             "About",
             "Skills",
             "Projects",
+            "Editing",
             "Publications",
             "Certifications",
             "Awards",
@@ -222,6 +221,7 @@ const Navigation = ({ toggleOpen }) => {
         "About",
         "Skills",
         "Projects",
+        "Editing",
         "Publications",
         "Certifications",
         "Awards",

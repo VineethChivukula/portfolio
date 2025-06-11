@@ -6,7 +6,6 @@ import {
   FaLinkedin,
   FaGithub,
   FaBlog,
-  FaSpotify,
   FaYoutube,
 } from "react-icons/fa";
 
@@ -195,20 +194,6 @@ const Contact = () => {
               rel="noopener noreferrer"
             >
               <FaBlog size={30} />
-            </a>
-          </div>
-        </div>
-        <div className="mt-8">
-          <p>Listen to my coding music playlist:</p>
-          <div className="flex justify-center space-x-4 pt-4">
-            <a
-              href="https://open.spotify.com/playlist/3Ruowj8sdmV0vicEuivLDJ?si=2coRjF-XQm-9qsbortcXGQ&pi=a-SJWvXiasQ5Op"
-              className="text-white hover:text-purple-300"
-              aria-label="Spotify"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaSpotify size={30} />
             </a>
           </div>
         </div>

@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Editing from "./components/Editing";
 import Publications from "./components/Publications";
 import Certifications from "./components/Certifications";
 import Awards from "./components/Awards";
@@ -78,6 +79,11 @@ const App = () => {
         {" "}
         {/* Marks the scroll target for Projects section */}
         <Projects />
+      </Element>
+      <Element name="editing">
+        {" "}
+        {/* Marks the scroll target for Editing section */}
+        <Editing />
       </Element>
       <Element name="publications">
         {" "}

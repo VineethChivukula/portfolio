@@ -94,10 +94,11 @@ const About = () => {
         <p className="about-paragraph text-base sm:text-lg text-purple-300 max-w-3xl mx-auto leading-relaxed">
           I am Vineeth Chivukula, a Software Engineer with a passion for
           building scalable applications and solving challenging problems using
-          technology. With a strong background in Python, Java, and React.js, I
-          specialize in developing efficient APIs and intuitive user interfaces.
-          My projects range from automating workflows to creating data
-          visualization tools that enhance user experience.
+          technology, and I also enjoy video editing as a hobby. With a strong
+          background in Python, Java, and React.js, I specialize in developing
+          efficient APIs and intuitive user interfaces. My projects range from
+          automating workflows to creating data visualization tools that enhance
+          user experience.
         </p>
         <div className="mt-8 about-button">
           <a
