@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const awards = [
+const achievements = [
   {
     title: "Tech Expressway Merit Holder Award",
     description:
@@ -45,17 +45,17 @@ const awards = [
 ];
 
 /**
- * Awards component that displays a list of awards with animations.
+ * Achievements component that displays a list of achievements with animations.
  *
- * This component uses GSAP and ScrollTrigger to animate the appearance of award cards
+ * This component uses GSAP and ScrollTrigger to animate the appearance of achievement cards
  * as they come into view. Each card fades in and moves up slightly when scrolled into view.
  *
  * @component
  * @example
  * // Example usage:
- * <Awards />
+ * <Achievements />
  *
- * @returns {JSX.Element} The rendered Awards component.
+ * @returns {JSX.Element} The rendered Achievements component.
  *
  * @requires gsap
  * @requires ScrollTrigger
@@ -63,17 +63,17 @@ const awards = [
  * @requires framer-motion
  *
  * @description
- * The component fetches a list of awards and displays them in a responsive grid layout.
- * Each award card contains a title, date, and description. The cards are animated using
+ * The component fetches a list of achievements and displays them in a responsive grid layout.
+ * Each achievement card contains a title, date, and description. The cards are animated using
  * GSAP's ScrollTrigger plugin to create a smooth scrolling effect.
  */
-const Awards = () => {
+const Achievements = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const awardCards = document.querySelectorAll(".award-card");
+    const achievementCards = document.querySelectorAll(".achievement-card");
 
-    awardCards.forEach((card) => {
+    achievementCards.forEach((card) => {
       const animation = gsap.fromTo(
         card,
         {
@@ -107,7 +107,7 @@ const Awards = () => {
   }, []);
 
   return (
-    <section id="awards" className="bg-purple-900 text-white py-20">
+    <section id="achievements" className="bg-purple-900 text-white py-20">
       <div className="container mx-auto text-center px-4 sm:px-6 lg:px-8">
         <motion.h2
           className="text-3xl sm:text-4xl font-bold mb-6"
@@ -115,17 +115,17 @@ const Awards = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Honors and Awards
+          Achievements
         </motion.h2>
         <div className="flex flex-wrap justify-center">
-          {awards.map((award, index) => (
+          {achievements.map((achievement, index) => (
             <div
               key={index}
-              className="award-card bg-white text-purple-900 rounded-lg shadow-lg p-6 m-4 max-w-sm w-full sm:w-auto"
+              className="achievement-card bg-white text-purple-900 rounded-lg shadow-lg p-6 m-4 max-w-sm w-full sm:w-auto"
             >
-              <h3 className="text-xl font-semibold">{award.title}</h3>
-              <p className="text-sm text-gray-500 mb-4">{award.date}</p>
-              <p className="text-sm text-gray-500">{award.description}</p>
+              <h3 className="text-xl font-semibold">{achievement.title}</h3>
+              <p className="text-sm text-gray-500 mb-4">{achievement.date}</p>
+              <p className="text-sm text-gray-500">{achievement.description}</p>
             </div>
           ))}
         </div>
@@ -134,4 +134,4 @@ const Awards = () => {
   );
 };
 
-export default Awards;
+export default Achievements;

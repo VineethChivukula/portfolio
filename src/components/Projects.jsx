@@ -57,11 +57,6 @@ const Projects = () => {
         "A Python-based Flask application using SQLAlchemy and MySQL for creating a database schema and complex APIs, integrated with WATI and Brevo APIs.",
     },
     {
-      title: "Zoom Attendance Tracker",
-      description:
-        "A tool for educators using the Zoom API and OAuth2 to automate attendance tracking and send email notifications.",
-    },
-    {
       title: "Bank Statement Aggregator",
       description:
         "An application enabling the generation, management, and secure upload/download of bank statements to Amazon S3 using SQLAlchemy with MySQL.",
@@ -70,6 +65,16 @@ const Projects = () => {
       title: "Data Structure Visualizer",
       description:
         "An interactive Data Structure Visualizer built with ReactJS and Material UI, featuring a theme toggle and a responsive sidebar.",
+    },
+    {
+      title: "Zoom Attendance Tracker",
+      description:
+        "A tool for educators using the Zoom API and OAuth2 to automate attendance tracking and send email notifications.",
+    },
+    {
+      title: "The Queen Collab",
+      description:
+        "A project on which I collaborated with highly skilled artists on Instagram to create an extraordinary art compilation.",
     },
   ];
 

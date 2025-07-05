@@ -58,7 +58,7 @@ const Editing = () => {
       className="video-section bg-purple-800 text-white py-20"
     >
       <div className="container mx-auto text-center px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold mb-8">Editing</h2>
+        <h2 className="text-4xl font-bold mb-8">Video Editing</h2>
         <div className="flex flex-wrap justify-center">
           {videos.map((video, index) => (
             <div

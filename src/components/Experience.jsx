@@ -13,6 +13,14 @@ const experience = [
     //   "Mentored 10+ at-risk youth by implementing customized learning plans in mathematics, significantly improving their academic performance.",
   },
   {
+    title: "Technical Assistance Support",
+    organization: "Frontlines EduTech (FLM)",
+    location: "Vijayawada, Andhra Pradesh",
+    date: "Jul 2024 – Oct 2024",
+    description:
+      "Worked on back-end development for the company's internal Operations Board project, along with a few smaller projects.",
+  },
+  {
     title: "Academic Support Volunteer",
     organization: "Make A Difference Organization",
     location: "Vijayawada, Andhra Pradesh",

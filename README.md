@@ -15,7 +15,7 @@ Welcome to Vineeth Chivukula's personal portfolio repository! This project showc
 
 ## Overview
 
-This portfolio serves as a digital space to highlight my professional experience, technical skills, and personal projects. It includes sections such as About, Skills, Projects, Publications, Certifications, Awards, Experience, and a contact form.
+This portfolio serves as a digital space to highlight my professional experience, technical skills, and personal projects. It includes sections such as Skills, Projects, Achievements, and more.
 
 ## Features
 
@@ -80,16 +80,23 @@ This portfolio serves as a digital space to highlight my professional experience
 
 ### Key Components
 
+- **About:** Detailed information about my background, skills, and interests.
+- **Achievements:** Highlights achievements and honors.
+- **Certifications:** Professional certifications with links to view credentials.
+- **Contact:** Contact form powered by EmailJS and social media links.
+- **Editing** Samples of recently uploaded video edits on YouTube.
+- **Experience:** Outlines professional experience and contributions.
+- **Footer:** Copyright information and technologies used.
 - **Header:** Navigation bar with links and an animated hamburger menu for mobile screens.
 - **Hero:** Introduction section with a brief overview and smooth scrolling to other sections.
-- **About:** Detailed information about my background, skills, and interests.
-- **Skills:** A list of technical skills with interactive animations.
+- **Preloader:** Loading logo animation.
 - **Projects:** Showcases key projects with descriptions and links to repositories or demos.
 - **Publications:** Lists published work with links to articles or journals.
-- **Certifications:** Professional certifications with links to view credentials.
-- **Awards:** Highlights achievements and honors.
-- **Experience:** Outlines professional experience and contributions.
-- **Contact:** Contact form powered by EmailJS and social media links.
+- **ScrollProgressBar:** A progress bar that changes with respect to the scroll position.
+- **Skills:** A list of technical skills with
+  interactive animations.
+- **Testimonials:** A list of reviewers with their information and feedback.
+- **WigglyCursor** A jelly like interactive cursor animation.
 
 ## Usage
 

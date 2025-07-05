@@ -5,20 +5,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const skills = [
   "Python",
   "Java",
-  "Spring",
-  "JavaScript",
-  "React.js",
   "HTML",
   "CSS",
-  "Tailwind CSS",
-  "Node.js",
-  "Flask",
+  "JavaScript",
+  "React.js",
   "API Development",
   "MySQL",
   "Machine Learning",
   "Deep Learning",
   "Data Structures",
-  "Algorithms",
   "Video Editing",
 ];
 

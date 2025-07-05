@@ -8,7 +8,7 @@ import Projects from "./components/Projects";
 import Editing from "./components/Editing";
 import Publications from "./components/Publications";
 import Certifications from "./components/Certifications";
-import Awards from "./components/Awards";
+import Achievements from "./components/Achievements";
 import Experience from "./components/Experience";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
@@ -95,10 +95,10 @@ const App = () => {
         {/* Marks the scroll target for Certifications section */}
         <Certifications />
       </Element>
-      <Element name="awards">
+      <Element name="achievements">
         {" "}
-        {/* Marks the scroll target for Awards section */}
-        <Awards />
+        {/* Marks the scroll target for Achievements section */}
+        <Achievements />
       </Element>
       <Element name="experience">
         {" "}
