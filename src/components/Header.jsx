@@ -2,7 +2,26 @@ import { motion, useCycle } from "framer-motion";
 import PropTypes from "prop-types";
 import vLogo from "../assets/vlogo.png";
 import { Link } from "react-scroll";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useMemo, useCallback, memo } from "react";
+import { NAVIGATION_LINKS, SCROLL_CONFIG } from "../constants";
+
+// Animation variants
+const SIDEBAR_VARIANTS = {
+  open: {
+    x: 0,
+    transition: {
+      stiffness: 20,
+      restDelta: 2,
+    },
+  },
+  closed: {
+    x: "-100%",
+    transition: {
+      stiffness: 200,
+      damping: 40,
+    },
+  },
+};
 
 /**
  * Header component that includes a logo, desktop navigation, and a mobile navigation menu.
@@ -18,6 +37,7 @@ import { useEffect, useRef } from "react";
  * @description
  * The Header component uses the `useCycle` hook to toggle the state of the sidebar (open/closed).
  * It also uses `useRef` to reference the sidebar element and `useEffect` to handle clicks outside the sidebar.
+ * Optimized with React.memo and useCallback for better performance.
  *
  * The component includes:
  * - A logo with animation effects.
@@ -33,34 +53,25 @@ import { useEffect, useRef } from "react";
  *
  * @props None
  */
-const Header = () => {
+const Header = memo(() => {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const sidebarRef = useRef(null);
 
-  const sidebarVariants = {
-    open: {
-      x: 0,
-      transition: {
-        stiffness: 20,
-        restDelta: 2,
-      },
-    },
-    closed: {
-      x: "-100%",
-      transition: {
-        stiffness: 200,
-        damping: 40,
-      },
-    },
-  };
+  const handleClickOutside = useCallback((event) => {
+    if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+      toggleOpen(false);
+    }
+  }, [toggleOpen]);
+
+  const handleLogoClick = useCallback(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
+  const handleToggle = useCallback(() => {
+    toggleOpen();
+  }, [toggleOpen]);
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
-        toggleOpen(false);
-      }
-    };
-
     if (isOpen) {
       document.addEventListener("mousedown", handleClickOutside);
     } else {
@@ -70,7 +81,7 @@ const Header = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [isOpen, toggleOpen]);
+  }, [isOpen, handleClickOutside]);
 
   return (
     <header className="bg-purple-950 text-white py-4 shadow-lg fixed w-full z-20">
@@ -84,9 +95,7 @@ const Header = () => {
           whileHover={{ scale: 1.1, color: "#ffeb3b" }}
           whileTap={{ scale: 0.9 }}
         >
-          <motion.a
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          >
+          <motion.a onClick={handleLogoClick}>
             <motion.div
               drag
               dragConstraints={{ top: 0, bottom: 0, left: -50, right: 50 }}
@@ -105,18 +114,7 @@ const Header = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.5 }}
         >
-          {[
-            "About",
-            "Skills",
-            "Projects",
-            "Editing",
-            "Publications",
-            "Certifications",
-            "Achievements",
-            "Experience",
-            "Testimonials",
-            "Contact",
-          ].map((link) => (
+          {NAVIGATION_LINKS.map((link) => (
             <motion.div
               key={link}
               drag
@@ -126,10 +124,7 @@ const Header = () => {
             >
               <Link
                 to={link.toLowerCase()}
-                spy={true}
-                smooth={true}
-                duration={500}
-                offset={-70}
+                {...SCROLL_CONFIG}
                 className="text-white cursor-pointer hover:text-purple-300"
               >
                 {link}
@@ -140,7 +135,7 @@ const Header = () => {
 
         {/* Hamburger Menu Icon for Mobile */}
         <div className="md:hidden z-30">
-          <MenuToggle toggle={() => toggleOpen()} isOpen={isOpen} />
+          <MenuToggle toggle={handleToggle} isOpen={isOpen} />
         </div>
       </div>
 
@@ -149,7 +144,7 @@ const Header = () => {
         ref={sidebarRef}
         initial={false}
         animate={isOpen ? "open" : "closed"}
-        variants={sidebarVariants}
+        variants={SIDEBAR_VARIANTS}
         className={`fixed top-0 left-0 bottom-0 w-64 bg-purple-800 text-white z-20 md:hidden ${
           isOpen ? "shadow-lg" : ""
         }`}
@@ -158,11 +153,13 @@ const Header = () => {
       </motion.nav>
     </header>
   );
-};
+});
+
+Header.displayName = 'Header';
 
 export default Header;
 
-const MenuToggle = ({ toggle, isOpen }) => (
+const MenuToggle = memo(({ toggle, isOpen }) => (
   <button
     onClick={toggle}
     className="text-white focus:outline-none"
@@ -190,54 +187,45 @@ const MenuToggle = ({ toggle, isOpen }) => (
       />
     </motion.div>
   </button>
-);
+));
 
+MenuToggle.displayName = 'MenuToggle';
 MenuToggle.propTypes = {
   toggle: PropTypes.func.isRequired,
   isOpen: PropTypes.bool.isRequired,
 };
 
-const Navigation = ({ toggleOpen }) => {
-  const navVariants = {
+const Navigation = memo(({ toggleOpen }) => {
+  const navVariants = useMemo(() => ({
     open: {
       transition: { staggerChildren: 0.07, delayChildren: 0.2 },
     },
     closed: {
       transition: { staggerChildren: 0.05, staggerDirection: -1 },
     },
-  };
+  }), []);
 
-  const itemVariants = {
+  const itemVariants = useMemo(() => ({
     open: { opacity: 1, x: 0 },
     closed: { opacity: 0, x: -20 },
-  };
+  }), []);
+
+  const handleLinkClick = useCallback(() => {
+    toggleOpen();
+  }, [toggleOpen]);
 
   return (
     <motion.ul
       className="flex flex-col items-center justify-center h-full space-y-6 text-lg"
       variants={navVariants}
     >
-      {[
-        "About",
-        "Skills",
-        "Projects",
-        "Editing",
-        "Publications",
-        "Certifications",
-        "Achievements",
-        "Experience",
-        "Testimonials",
-        "Contact",
-      ].map((link) => (
+      {NAVIGATION_LINKS.map((link) => (
         <motion.li key={link} variants={itemVariants}>
           <Link
             to={link.toLowerCase()}
-            spy={true}
-            smooth={true}
-            duration={500}
-            offset={-70}
+            {...SCROLL_CONFIG}
             className="text-white cursor-pointer hover:text-purple-300"
-            onClick={() => toggleOpen()}
+            onClick={handleLinkClick}
           >
             {link}
           </Link>
@@ -245,8 +233,9 @@ const Navigation = ({ toggleOpen }) => {
       ))}
     </motion.ul>
   );
-};
+});
 
+Navigation.displayName = 'Navigation';
 Navigation.propTypes = {
   toggleOpen: PropTypes.func.isRequired,
 };

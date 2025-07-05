@@ -1,7 +1,8 @@
-import { useRef, useLayoutEffect, useCallback } from "react";
+import { useRef, useLayoutEffect, useCallback, memo } from "react";
 import { gsap, Expo } from "gsap";
 import "../styles/WigglyCursor.css";
 
+// Custom hooks with optimizations
 function useTicker(callback, paused) {
   useLayoutEffect(() => {
     if (!paused && callback) {
@@ -22,18 +23,20 @@ function useInstance(value = {}) {
   return ref.current;
 }
 
-function getScale(diffX, diffY) {
+// Optimized calculation functions
+const getScale = (diffX, diffY) => {
   const distance = Math.sqrt(diffX * diffX + diffY * diffY);
   return Math.min(distance / 735, 0.35);
-}
+};
 
-function getAngle(diffX, diffY) {
+const getAngle = (diffX, diffY) => {
   return (Math.atan2(diffY, diffX) * 180) / Math.PI;
-}
+};
 
 /**
  * WigglyCursor component creates a wiggly cursor effect that follows the mouse movement.
  * It uses GSAP for animations and React hooks for managing state and lifecycle.
+ * Optimized with React.memo for better performance.
  *
  * @component
  * @example
@@ -43,7 +46,7 @@ function getAngle(diffX, diffY) {
  *
  * @returns {JSX.Element} A JSX element containing the wiggly cursor.
  */
-const WigglyCursor = () => {
+const WigglyCursor = memo(() => {
   const jellyRef = useRef(null);
 
   const pos = useInstance(() => ({
@@ -115,6 +118,8 @@ const WigglyCursor = () => {
       <div ref={jellyRef} className="jelly-blob"></div>
     </div>
   );
-};
+});
+
+WigglyCursor.displayName = 'WigglyCursor';
 
 export default WigglyCursor;

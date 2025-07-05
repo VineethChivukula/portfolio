@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, memo } from "react";
 import PropTypes from "prop-types";
 import gsap from "gsap";
 import "../styles/Preloader.css";
@@ -6,6 +6,7 @@ import vLogo from "../assets/vlogo.png";
 
 /**
  * Preloader component that displays a loading animation before transitioning out.
+ * Optimized with React.memo for better performance.
  *
  * @component
  * @param {Object} props - Component properties.
@@ -16,11 +17,12 @@ import vLogo from "../assets/vlogo.png";
  *
  * @returns {JSX.Element} The Preloader component.
  */
-const Preloader = ({ onComplete }) => {
+const Preloader = memo(({ onComplete }) => {
   const preloaderRef = useRef(null);
   const loaderRef = useRef(null);
   const loader1Ref = useRef(null);
   const logoRef = useRef(null);
+  const timelineRef = useRef(null);
 
   useEffect(() => {
     const preloader = preloaderRef.current;
@@ -33,6 +35,8 @@ const Preloader = ({ onComplete }) => {
         onComplete();
       },
     });
+
+    timelineRef.current = tl;
 
     tl.set(preloader, { opacity: 1 });
 
@@ -63,7 +67,9 @@ const Preloader = ({ onComplete }) => {
       });
 
     return () => {
-      tl.kill();
+      if (timelineRef.current) {
+        timelineRef.current.kill();
+      }
     };
   }, [onComplete]);
 
@@ -82,7 +88,9 @@ const Preloader = ({ onComplete }) => {
       </div>
     </div>
   );
-};
+});
+
+Preloader.displayName = 'Preloader';
 
 Preloader.propTypes = {
   onComplete: PropTypes.func.isRequired,

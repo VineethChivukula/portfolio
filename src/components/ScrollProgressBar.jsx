@@ -1,10 +1,11 @@
 import { motion, useScroll, useSpring } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, memo } from "react";
 import PropTypes from "prop-types";
 import "../styles/ScrollProgressBar.css";
 
 /**
  * ScrollProgressBar component displays a progress bar that scales based on the scroll position.
+ * Optimized with React.memo for better performance.
  *
  * @component
  * @param {Object} props - Component properties.
@@ -15,7 +16,7 @@ import "../styles/ScrollProgressBar.css";
  * @example
  * <ScrollProgressBar isOpen={true} />
  */
-const ScrollProgressBar = ({ isOpen }) => {
+const ScrollProgressBar = memo(({ isOpen }) => {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -30,7 +31,9 @@ const ScrollProgressBar = ({ isOpen }) => {
   }, [isOpen]);
 
   return <motion.div className="progress-bar" style={{ scaleX }} />;
-};
+});
+
+ScrollProgressBar.displayName = 'ScrollProgressBar';
 
 ScrollProgressBar.propTypes = {
   isOpen: PropTypes.bool.isRequired,

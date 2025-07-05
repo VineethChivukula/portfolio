@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
+import { memo } from "react";
 import profilePic from "../assets/hero.jpg";
 
 /**
  * Hero component renders a section with a profile picture, name, and description.
  * It includes animations for the section and the profile picture.
+ * Optimized with React.memo for better performance.
  *
  * @component
  * @example
@@ -13,7 +15,7 @@ import profilePic from "../assets/hero.jpg";
  *
  * @returns {JSX.Element} A section element with profile information and animations.
  */
-const Hero = () => {
+const Hero = memo(() => {
   return (
     <section className="bg-purple-900 text-white pt-24 md:pt-24 pb-12 md:pb-24 flex items-center justify-center">
       <motion.div
@@ -28,6 +30,7 @@ const Hero = () => {
           className="w-40 h-40 md:w-56 md:h-56 rounded-full mx-auto mb-3 shadow-lg"
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.3 }}
+          loading="eager" // Since this is above the fold
         />
         <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-2">
           Vineeth Chivukula
@@ -41,6 +44,8 @@ const Hero = () => {
       </motion.div>
     </section>
   );
-};
+});
+
+Hero.displayName = 'Hero';
 
 export default Hero;
