@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { memo } from "react";
-import profilePic from "../assets/hero.jpg";
+import profilePic from "../assets/hero.png";
 
 /**
  * Hero component renders a section with a profile picture, name, and description.
@@ -39,13 +39,14 @@ const Hero = memo(() => {
           Associate Software Engineer @Accenture
         </p>
         <p className="text-base sm:text-lg md:text-xl text-purple-400">
-          Building scalable applications and solving problems through code.
+          <i>"Life navigates the binary search of low, mid, and high, adapting in
+          logarithmic time."</i>
         </p>
       </motion.div>
     </section>
   );
 });
 
-Hero.displayName = 'Hero';
+Hero.displayName = "Hero";
 
 export default Hero;

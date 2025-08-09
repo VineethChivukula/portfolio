@@ -9,8 +9,8 @@ const experience = [
     organization: "Accenture",
     location: "Mumbai, Maharashtra",
     date: "Sep 2024 – Present",
-    // description:
-    //   "Mentored 10+ at-risk youth by implementing customized learning plans in mathematics, significantly improving their academic performance.",
+    description:
+      "Implemented SQL transformation scripts within a dbt framework, processing raw data from Snowflake through staging, intermediate, and mart layers. Translated business requirements and source-to-target mapping specifications into executable code, utilizing custom macros and adhering to client coding standards to deliver curated data marts optimized for Power BI visualization.",
   },
   {
     title: "Technical Assistance Support",

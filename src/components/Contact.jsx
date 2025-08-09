@@ -7,6 +7,7 @@ import {
   FaGithub,
   FaBlog,
   FaYoutube,
+  FaInstagram
 } from "react-icons/fa";
 
 // Constants
@@ -49,6 +50,11 @@ const SOCIAL_LINKS = [
     href: "https://www.youtube.com/@vineethchivukula",
     icon: FaYoutube,
     label: "YouTube",
+  },
+  {
+    href: "https://www.instagram.com/6nny.aep",
+    icon: FaInstagram,
+    label: "Instagram",
   },
   {
     href: "https://vineethchivukula.hashnode.dev/",

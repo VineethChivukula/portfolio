@@ -6,16 +6,18 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const SKILLS = [
   "Python",
   "Java",
+  "Data Structures",
   "HTML",
   "CSS",
   "JavaScript",
   "React.js",
   "API Development",
   "MySQL",
+  "Data Build Tool",
+  "Power BI",
   "Machine Learning",
   "Deep Learning",
-  "Data Structures",
-  "Video Editing",
+  "After Effects",
 ];
 
 const ANIMATION_CONFIG = {
@@ -56,20 +58,16 @@ const Skills = memo(() => {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    
+
     // Clear previous animation
     if (animationRef.current) {
       animationRef.current.kill();
     }
 
-    animationRef.current = gsap.fromTo(
-      ".skill-item",
-      ANIMATION_CONFIG.from,
-      {
-        ...ANIMATION_CONFIG.to,
-        scrollTrigger: ANIMATION_CONFIG.scrollTrigger,
-      }
-    );
+    animationRef.current = gsap.fromTo(".skill-item", ANIMATION_CONFIG.from, {
+      ...ANIMATION_CONFIG.to,
+      scrollTrigger: ANIMATION_CONFIG.scrollTrigger,
+    });
 
     return () => {
       if (animationRef.current) {
@@ -100,6 +98,6 @@ const Skills = memo(() => {
   );
 });
 
-Skills.displayName = 'Skills';
+Skills.displayName = "Skills";
 
 export default Skills;
