@@ -5,18 +5,25 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const certifications = [
   {
+    title: "Snowflake SnowPro Core",
+    date: "Nov 2025 - Nov 2027",
+    link: "https://achieve.snowflake.com/5910f33b-29a6-4574-86d7-b9ae58b0c160",
+    description:
+      "Certified in designing, developing, and managing secure, scalable solutions on Snowflake's platform to achieve key business objectives.",
+  },
+  {
     title: "Microsoft Certified: Azure Fundamentals",
     date: "Apr 2025",
     link: "https://learn.microsoft.com/en-us/users/vineethchivukula/credentials/df403a349a495872",
     description:
-      "Earned certification demonstrating foundational knowledge of cloud services and how those services are provided with Microsoft Azure.",
+      "Certified in foundational cloud services, including the core concepts and delivery models utilized by the Microsoft Azure platform.",
   },
   {
     title: "Microsoft Certified: Azure AI Fundamentals",
     date: "May 2024",
     link: "https://learn.microsoft.com/en-us/users/vineethchivukula/credentials/e5d8d79e95ff06c4",
     description:
-      "Earned certification demonstrating foundational knowledge of AI and machine learning on Microsoft Azure.",
+      "Certified in foundational AI and machine learning technologies and how they are applied using Microsoft Azure services.",
   },
 ];
 

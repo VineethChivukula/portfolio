@@ -11,6 +11,7 @@ const publications = [
       "5th International Conference On Data, Engineering, And Applications (IDEA-2k24)",
     publisher: "Springer",
     status: "Accepted",
+    link: "https://ideaconference.in/ACCEPTEDPAPERS-1.pdf",
   },
   {
     title:

@@ -14,7 +14,7 @@ const SKILLS = [
   "API Development",
   "MySQL",
   "Data Build Tool",
-  "Power BI",
+  "Snowflake",
   "Machine Learning",
   "Deep Learning",
   "After Effects",

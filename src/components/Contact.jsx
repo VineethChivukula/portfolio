@@ -5,6 +5,7 @@ import emailjs from "emailjs-com";
 import {
   FaLinkedin,
   FaGithub,
+  FaMedium,
   FaBlog,
   FaYoutube,
   FaInstagram
@@ -55,6 +56,11 @@ const SOCIAL_LINKS = [
     href: "https://www.instagram.com/6nny.aep",
     icon: FaInstagram,
     label: "Instagram",
+  },
+  {
+    href: "https://vineethchivukula.medium.com/",
+    icon: FaMedium,
+    label: "Medium",
   },
   {
     href: "https://vineethchivukula.hashnode.dev/",

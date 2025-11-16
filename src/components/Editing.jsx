@@ -40,15 +40,15 @@ const Editing = () => {
   const videos = [
     {
       title: "Sample Edit 1",
-      url: "https://youtube.com/embed/z-GgrumGqR4?si=_asWtX0QCuKXIc5f",
+      url: "https://youtube.com/embed/bYsPdrkw_4U?si=Cz83DMn50ivSp1Lp",
     },
     {
       title: "Sample Edit 2",
-      url: "https://youtube.com/embed/499cOqLJ9qw?si=g-FDDO0aVVOAezpA",
+      url: "https://youtube.com/embed/dC-LjNmaHsI?si=NpPjiI_o93WHtAF7",
     },
     {
       title: "Sample Edit 3",
-      url: "https://youtube.com/embed/dC-LjNmaHsI?si=NpPjiI_o93WHtAF7",
+      url: "https://youtube.com/embed/ovXLUVTvUog?si=U8YIZqhQxdrv02Dx",
     },
   ];
 
