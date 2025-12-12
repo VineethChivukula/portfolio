@@ -3,9 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import sujinaAvatar from "../assets/sujina.jpg";
 import upendraAvatar from "../assets/upendra.jpg";
-import yogithaAvatar from "../assets/yogitha.jpg";
-import hariAvatar from "../assets/hari.jpg";
-import saiAvatar from "../assets/sai.jpg";
+import sonalAvatar from "../assets/sonal.jpg";
 
 /**
  * An array of testimonial objects.
@@ -21,6 +19,13 @@ import saiAvatar from "../assets/sai.jpg";
  */
 const testimonials = [
   {
+    name: "Sonal Jakhetia",
+    image: sonalAvatar,
+    role: "Data Architecture Manager at Accenture",
+    review:
+      "Vineeth joined our team in July 2025, and has been very proactive in all the tasks that are assigned to him. He is attentive in all meetings, has shown tremendous interest in picking up functionality and operations of the ManPowerGroup's DARWIN project. His diligent participation and contribution in Account Reconciliation Report module is praiseworthy. His eye to detail in writing Source to Target mappings is also commendable. He has done trainings in Data Build Tool and Snowflake. In a short span of time, he has become and integral member of our team. ",
+  },
+  {
     name: "Sujina Pradeep",
     image: sujinaAvatar,
     role: "Technology Education Senior Analyst at Accenture",
@@ -33,27 +38,6 @@ const testimonials = [
     role: "Co-Founder & CTO at Frontlines EduTech",
     review:
       "Vineeth's exceptional expertise in Python and Flask, combined with his proactive approach, clean code, and invaluable problem-solving skills, made him an outstanding tech intern, and I highly recommend him for any tech or development role.",
-  },
-  {
-    name: "Yogitha Akkineni",
-    image: yogithaAvatar,
-    role: "Associate Consultant at Microsoft",
-    review:
-      "Vineeth excels in full-stack development, specializing in Node.js, microservices, and diverse frameworks, delivering efficient, scalable solutions.",
-  },
-  {
-    name: "Avvaru Hari Sai Babu",
-    image: hariAvatar,
-    role: "Business Technology Analyst at Deloitte Tax",
-    review:
-      "A dedicated, passionate coder with consistent growth in web development and cybersecurity.",
-  },
-  {
-    name: "Sai Yarlagadda",
-    image: saiAvatar,
-    role: "Senior Associate Software Engineer at AT&T",
-    review:
-      "A passionate coder with a strong drive for quality, problem-solving, and innovation, making him a valuable team asset.",
   },
 ];
 
