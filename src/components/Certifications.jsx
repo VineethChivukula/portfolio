@@ -5,9 +5,16 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const certifications = [
   {
+    title: "Snowflake SnowPro Advanced Data Engineer",
+    date: "Jan 2026 - Jan 2028",
+    link: "https://achieve.snowflake.com/f9a588c3-1d95-4a3c-9665-684b60df5849#acc.Q8A5VZzN",
+    description:
+      "Certified in advanced data engineering principles, that validates the knowledge and skills required to implement comprehensive solutions using Snowflake and its components.",
+  },
+  {
     title: "Snowflake SnowPro Core",
     date: "Nov 2025 - Nov 2027",
-    link: "https://achieve.snowflake.com/5910f33b-29a6-4574-86d7-b9ae58b0c160",
+    link: "https://achieve.snowflake.com/5910f33b-29a6-4574-86d7-b9īae58b0c160",
     description:
       "Certified in designing, developing, and managing secure, scalable solutions on Snowflake's platform to achieve key business objectives.",
   },

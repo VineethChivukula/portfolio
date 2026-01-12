@@ -23,7 +23,7 @@ const testimonials = [
     image: sonalAvatar,
     role: "Data Architecture Manager at Accenture",
     review:
-      "Vineeth joined our team in July 2025, and has been very proactive in all the tasks that are assigned to him. He is attentive in all meetings, has shown tremendous interest in picking up functionality and operations of the ManPowerGroup's DARWIN project. His diligent participation and contribution in Account Reconciliation Report module is praiseworthy. His eye to detail in writing Source to Target mappings is also commendable. He has done trainings in Data Build Tool and Snowflake. In a short span of time, he has become and integral member of our team. ",
+      "Vineeth joined our team in July 2025, and has been very proactive in all the tasks that are assigned to him. He is attentive in all meetings, has shown tremendous interest in picking up functionality and operations of the ManPowerGroup's DARWIN project. His diligent participation and contribution in Account Reconciliation Report module is praiseworthy. His eye to detail in writing Source to Target mappings is also commendable. He has done trainings in Data Build Tool and Snowflake. In a short span of time, he has become an integral member of our team. ",
   },
   {
     name: "Sujina Pradeep",
