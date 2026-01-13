@@ -14,7 +14,7 @@ const certifications = [
   {
     title: "Snowflake SnowPro Core",
     date: "Nov 2025 - Jan 2028",
-    link: "https://achieve.snowflake.com/5910f33b-29a6-4574-86d7-b9īae58b0c160",
+    link: "https://achieve.snowflake.com/5910f33b-29a6-4574-86d7-b9ae58b0c160#acc.A8egtM1z",
     description:
       "Certified in designing, developing, and managing secure, scalable solutions on Snowflake's platform to achieve key business objectives.",
   },
