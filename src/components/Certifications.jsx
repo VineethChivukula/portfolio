@@ -5,15 +5,22 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const certifications = [
   {
+    title: "Snowflake SnowPro Speciality: Gen AI",
+    date: "Mar 2026 - Mar 2028",
+    link: "https://www.credential.net/e38b8fd0-a2d6-48b9-a4a9-d9bae04d125c#acc.FRQ3payY",
+    description:
+      "Certified in specialized knowledge, skills, and best practices for leveraging Gen AI methodologies in Snowflake, including key concepts, features, and programming constructs.",
+  },
+  {
     title: "Snowflake SnowPro Advanced Data Engineer",
-    date: "Jan 2026 - Jan 2028",
+    date: "Jan 2026 - Mar 2028",
     link: "https://achieve.snowflake.com/f9a588c3-1d95-4a3c-9665-684b60df5849#acc.Q8A5VZzN",
     description:
       "Certified in advanced data engineering principles, that validates the knowledge and skills required to implement comprehensive solutions using Snowflake and its components.",
   },
   {
     title: "Snowflake SnowPro Core",
-    date: "Nov 2025 - Jan 2028",
+    date: "Nov 2025 - Mar 2028",
     link: "https://achieve.snowflake.com/5910f33b-29a6-4574-86d7-b9ae58b0c160#acc.A8egtM1z",
     description:
       "Certified in designing, developing, and managing secure, scalable solutions on Snowflake's platform to achieve key business objectives.",
@@ -75,7 +82,7 @@ const Certifications = () => {
             toggleActions: "play reverse play reverse",
             markers: false,
           },
-        }
+        },
       );
     });
   }, []);
