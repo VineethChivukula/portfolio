@@ -13,7 +13,7 @@ const certifications = [
   },
   {
     title: "Snowflake SnowPro Advanced Data Engineer",
-    date: "Jan 2026 - Mar 2028",
+    date: "Jan 2026 - Jan 2028",
     link: "https://achieve.snowflake.com/f9a588c3-1d95-4a3c-9665-684b60df5849#acc.Q8A5VZzN",
     description:
       "Certified in advanced data engineering principles, that validates the knowledge and skills required to implement comprehensive solutions using Snowflake and its components.",
