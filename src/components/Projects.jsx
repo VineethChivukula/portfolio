@@ -45,7 +45,7 @@ const Projects = () => {
             toggleActions: "play reverse play reverse",
             markers: false,
           },
-        }
+        },
       );
     });
   }, []);
@@ -60,11 +60,6 @@ const Projects = () => {
       title: "Bank Statement Aggregator",
       description:
         "An application enabling the generation, management, and secure upload/download of bank statements to Amazon S3 using SQLAlchemy with MySQL.",
-    },
-    {
-      title: "Data Structure Visualizer",
-      description:
-        "An interactive Data Structure Visualizer built with ReactJS and Material UI, featuring a theme toggle and a responsive sidebar.",
     },
     {
       title: "Zoom Attendance Tracker",

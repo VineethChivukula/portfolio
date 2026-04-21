@@ -36,11 +36,10 @@ const Hero = memo(() => {
           Vineeth Chivukula
         </h2>
         <p className="text-lg sm:text-xl md:text-2xl text-purple-300 mb-4">
-          Associate Software Engineer @Accenture
+          Data Engineer @Accenture
         </p>
         <p className="text-base sm:text-lg md:text-xl text-purple-400">
-          <i>"Life navigates the binary search of low, mid, and high, adapting in
-          logarithmic time."</i>
+          <i>"The world only cares about the results"</i> - Gun Park
         </p>
       </motion.div>
     </section>
