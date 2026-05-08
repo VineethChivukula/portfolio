@@ -4,6 +4,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import sujinaAvatar from "../assets/sujina.jpg";
 import upendraAvatar from "../assets/upendra.jpg";
 import sonalAvatar from "../assets/sonal.jpg";
+import akshadaAvatar from "../assets/akshada.png";
+import adrianaAvatar from "../assets/adriana.png";
 
 /**
  * An array of testimonial objects.
@@ -18,6 +20,20 @@ import sonalAvatar from "../assets/sonal.jpg";
  * @type {Testimonial[]}
  */
 const testimonials = [
+  {
+    name: "Adriana Carolina Sanchez",
+    image: adrianaAvatar,
+    role: "Program and Project Mgmt Manager at Accenture",
+    review:
+      "While our direct interaction was limited, you consistently stayed on top of topics, demonstrated a strong commitment to progress, and provided effective follow-up with the MPG team. ",
+  },
+  {
+    name: "Akshada Rohan Samant",
+    image: akshadaAvatar,
+    role: "BI Engineering Associate Manager at Accenture",
+    review:
+      "Vineeth, your quick grasp of technical concepts, strong SQL skills, and proactive approach to understanding complex code have been highly impressive. You have consistently delivered on time and shown great reliability even during high-pressure phases, including working on weekends and holidays when needed. Your effort in consolidating information to streamline approvals demonstrated strong ownership and commitment. Beyond your technical contributions, your humble, patient, and supportive nature has fostered a collaborative and hassle-free team environment. I wish you the very best for your continued growth and success ahead.",
+  },
   {
     name: "Sonal Jakhetia",
     image: sonalAvatar,
