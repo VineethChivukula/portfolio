@@ -1,11 +1,10 @@
 import { motion, useCycle } from "framer-motion";
 import PropTypes from "prop-types";
 import vLogo from "../assets/vlogo.png";
-import { Link } from "react-scroll";
 import { useEffect, useRef, useMemo, useCallback, memo } from "react";
-import { NAVIGATION_LINKS, SCROLL_CONFIG } from "../constants";
+import { NAVIGATION_LINKS } from "../constants";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
 
-// Animation variants
 const SIDEBAR_VARIANTS = {
   open: {
     x: 0,
@@ -49,7 +48,7 @@ const SIDEBAR_VARIANTS = {
  * - `useCycle` from `framer-motion`
  * - `useRef` and `useEffect` from `react`
  * - `motion` from `framer-motion`
- * - `Link` from `react-scroll`
+ * - `ScrollSmoother` from `gsap`
  *
  * @props None
  */
@@ -57,15 +56,40 @@ const Header = memo(() => {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const sidebarRef = useRef(null);
 
-  const handleClickOutside = useCallback((event) => {
-    if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
-      toggleOpen(false);
+  const handleClickOutside = useCallback(
+    (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        toggleOpen(false);
+      }
+    },
+    [toggleOpen],
+  );
+
+  // Custom smooth scroll to anchor
+  const smoothScrollTo = useCallback((targetId) => {
+    const smoother = ScrollSmoother.get();
+    if (smoother) {
+      smoother.scrollTo(targetId, {
+        duration: 1.2,
+        ease: "power2.inOut", // smooth deceleration
+      });
+    } else {
+      document.querySelector(targetId)?.scrollIntoView({ behavior: "smooth" });
     }
-  }, [toggleOpen]);
+  }, []);
 
   const handleLogoClick = useCallback(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
+  smoothScrollTo(0);
+}, [smoothScrollTo]);
+
+  const handleNavClick = useCallback(
+    (e) => {
+      e.preventDefault();
+      const target = e.currentTarget.getAttribute("href");
+      if (target) smoothScrollTo(target);
+    },
+    [smoothScrollTo],
+  );
 
   const handleToggle = useCallback(() => {
     toggleOpen();
@@ -77,7 +101,6 @@ const Header = memo(() => {
     } else {
       document.removeEventListener("mousedown", handleClickOutside);
     }
-
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
@@ -122,13 +145,13 @@ const Header = memo(() => {
               whileDrag={{ scale: 1.2, rotate: 10 }}
               className="inline-block"
             >
-              <Link
-                to={link.toLowerCase()}
-                {...SCROLL_CONFIG}
+              <a
+                href={`#${link.toLowerCase()}`}
                 className="text-white cursor-pointer hover:text-purple-300"
+                onClick={handleNavClick}
               >
                 {link}
-              </Link>
+              </a>
             </motion.div>
           ))}
         </motion.nav>
@@ -149,13 +172,13 @@ const Header = memo(() => {
           isOpen ? "shadow-lg" : ""
         }`}
       >
-        <Navigation toggleOpen={toggleOpen} />
+        <Navigation toggleOpen={toggleOpen} scrollTo={smoothScrollTo} />
       </motion.nav>
     </header>
   );
 });
 
-Header.displayName = 'Header';
+Header.displayName = "Header";
 
 export default Header;
 
@@ -189,30 +212,38 @@ const MenuToggle = memo(({ toggle, isOpen }) => (
   </button>
 ));
 
-MenuToggle.displayName = 'MenuToggle';
+MenuToggle.displayName = "MenuToggle";
 MenuToggle.propTypes = {
   toggle: PropTypes.func.isRequired,
   isOpen: PropTypes.bool.isRequired,
 };
 
-const Navigation = memo(({ toggleOpen }) => {
-  const navVariants = useMemo(() => ({
-    open: {
-      transition: { staggerChildren: 0.07, delayChildren: 0.2 },
-    },
-    closed: {
-      transition: { staggerChildren: 0.05, staggerDirection: -1 },
-    },
-  }), []);
+const Navigation = memo(({ toggleOpen, scrollTo }) => {
+  const navVariants = useMemo(
+    () => ({
+      open: { transition: { staggerChildren: 0.07, delayChildren: 0.2 } },
+      closed: { transition: { staggerChildren: 0.05, staggerDirection: -1 } },
+    }),
+    [],
+  );
 
-  const itemVariants = useMemo(() => ({
-    open: { opacity: 1, x: 0 },
-    closed: { opacity: 0, x: -20 },
-  }), []);
+  const itemVariants = useMemo(
+    () => ({
+      open: { opacity: 1, x: 0 },
+      closed: { opacity: 0, x: -20 },
+    }),
+    [],
+  );
 
-  const handleLinkClick = useCallback(() => {
-    toggleOpen();
-  }, [toggleOpen]);
+  const handleLinkClick = useCallback(
+    (e) => {
+      e.preventDefault();
+      const target = e.currentTarget.getAttribute("href");
+      toggleOpen(); // Close mobile menu
+      if (scrollTo && target) scrollTo(target);
+    },
+    [toggleOpen, scrollTo],
+  );
 
   return (
     <motion.ul
@@ -221,21 +252,20 @@ const Navigation = memo(({ toggleOpen }) => {
     >
       {NAVIGATION_LINKS.map((link) => (
         <motion.li key={link} variants={itemVariants}>
-          <Link
-            to={link.toLowerCase()}
-            {...SCROLL_CONFIG}
+          <a
+            href={`#${link.toLowerCase()}`}
             className="text-white cursor-pointer hover:text-purple-300"
             onClick={handleLinkClick}
           >
             {link}
-          </Link>
+          </a>
         </motion.li>
       ))}
     </motion.ul>
   );
 });
 
-Navigation.displayName = 'Navigation';
+Navigation.displayName = "Navigation";
 Navigation.propTypes = {
   toggleOpen: PropTypes.func.isRequired,
 };

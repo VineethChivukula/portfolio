@@ -32,7 +32,6 @@ This portfolio serves as a digital space to highlight my professional experience
   - **Tailwind CSS:** Utility-first CSS framework for styling.
   - **GSAP (GreenSock Animation Platform):** Advanced animation library for interactive transitions.
   - **Framer Motion:** Declarative animation library for React.
-  - **React Scroll:** Library for smooth scrolling navigation.
 - **Other Tools:**
   - **EmailJS:** Service for handling contact form submissions without a backend.
 
@@ -107,7 +106,7 @@ This portfolio serves as a digital space to highlight my professional experience
 ## Credits
 
 - **Icons & Graphics:** Utilized icons from [React Icons](https://react-icons.github.io/react-icons/).
-- **Libraries & Tools:** This portfolio is powered by [React](https://react.dev/), [Tailwind CSS](https://tailwindcss.com/docs/guides/vite), [GSAP](https://gsap.com/), [Framer Motion](https://www.framer.com/motion/), [EmailJS](https://www.emailjs.com/), and [React Scroll](https://www.npmjs.com/package/react-scroll) for smooth navigation.
+- **Libraries & Tools:** This portfolio is powered by [React](https://react.dev/), [Tailwind CSS](https://tailwindcss.com/docs/guides/vite), [GSAP](https://gsap.com/), [Framer Motion](https://www.framer.com/motion/), and [EmailJS](https://www.emailjs.com/).
 
 ## License
 
