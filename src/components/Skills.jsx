@@ -6,14 +6,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const SKILLS = [
   "Python",
   "Java",
+  "SQL",
+  "Snowflake AI Data Cloud",
+  "Data Build Tool",
+  "Azure",
+  "Git",
   "Data Structures",
   "Algorithms",
-  "Rest API",
-  "MySQL",
-  "Data Build Tool",
-  "Snowflake",
-  "Azure",
-  "After Effects",
 ];
 
 const ANIMATION_CONFIG = {

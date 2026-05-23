@@ -5,20 +5,20 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const experience = [
   {
-    title: "Associate Software Engineer",
+    title: "Data Engineer",
     organization: "Accenture",
-    location: "Mumbai, Maharashtra",
-    date: "Sep 2024 – Present",
+    location: "Telangana, India",
+    date: "Oct 2024 – Present",
     description:
-      "Implemented SQL transformation scripts within a dbt framework, processing raw data from Snowflake through staging, intermediate, and mart layers. Translated business requirements and source-to-target mapping specifications into executable code, utilizing custom macros and adhering to client coding standards to deliver curated data marts optimized for Power BI visualization.",
+      "Engineered an end-to-end scalable 6-layer DBT pipeline in Snowflake (Data Vault 2.0) processing 100M+ rows of Oracle Fusion financial data. Delivered 20+ DBT models using the client's coding standards and custom macros within an agile framework. ptimized the financial reporting layer by implementing a star schema, cutting the PowerBI semantic model size by 75% and boosting performance. Translated complex business requirements into Source-to-Target Mappings for over 15+ DBT models.",
   },
   {
-    title: "Technical Assistance Support",
+    title: "Technical Assistance Support Intern",
     organization: "Frontlines EduTech (FLM)",
-    location: "Vijayawada, Andhra Pradesh",
-    date: "Jul 2024 – Oct 2024",
+    location: "Remote",
+    date: "Jul 2024 – Sep 2024",
     description:
-      "Worked on back-end development for the company's internal Operations Board project, along with a few smaller projects.",
+      "Built OpsBoard using Flask for 1M+ learners by creating & using 7 REST APIs for session/course management. Automated multi-channel notifications via WATI & Brevo APIs, reducing manual outreach and enabling real-time updates for new courses. Automated Zoom attendance tracking via Zoom API and cron jobs, reducing manual data entry by 90% with direct database ingestion.",
   },
   {
     title: "Academic Support Volunteer",

@@ -6,15 +6,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const publications = [
   {
     title:
-      "Vegetation Classification Using Landsat 8 Remote Sensing Data and a Sequential Convolutional Neural Network",
-    conference:
-      "5th International Conference On Data, Engineering, And Applications (IDEA-2k24)",
-    publisher: "Springer",
-    status: "Accepted",
-    link: "https://ideaconference.in/ACCEPTEDPAPERS-1.pdf",
-  },
-  {
-    title:
       "Identification Of Salt-Affected Soils In The Coastal Area Of Krishna District, Andhra Pradesh, Using Remote Sensing Data And Machine Learning Techniques",
     journal:
       "Informatyka, Automatyka, Pomiary W Gospodarce I Ochronie Środowiska (IAPGOS)",
